@@ -1,0 +1,135 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Wilson the Dog | Pictures</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" rel="javascript"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var menuFX = {};
+		menuFX.toggleMenu = function(menuSelector, mouseOverColor, mouseOutColor) {
+			
+			var background = $(menuSelector).css("background-color");
+			var color = $(menuSelector).css("color");
+
+			$(menuSelector).bind("mouseover", function(){
+				$(this).css("background-color", mouseOverColor);
+				$(this).css("color", mouseOutColor);
+			});
+			
+			$(menuSelector).bind("mouseout", function(){
+				$(this).css("background-color", background);
+				$(this).css("color", color);		
+			});
+			
+		};
+		
+		menuFX.toggleMenu("ul:first li", "#F69957", "#FFFFFF");
+		
+	});	
+
+</script>
+
+<style>
+
+	embed, object, audio, video {
+		max-width: 95%;
+	}
+	
+	img {
+		max-width: 95%;
+	}
+	
+	header {
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	nav {
+  		background-color: #DEDEDE;
+  		height: 40px;
+  		max-width: 95%;
+	}
+	
+	nav ul {
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+	}
+	
+	nav ul li {
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 20px; 
+	}
+	
+	nav li ul { 
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+	}
+
+	nav ul li a {
+    	text-align: left;
+    	color: #000000;
+    	text-decoration: none;
+	}
+	
+	main {
+		padding: 65px;
+		margin: 0 auto;
+	}
+
+</style>
+
+</head>
+
+		<body>
+                <header>
+                <img src="../images/wilsonpics.jpg" alt="wilson_pics">
+                </header>
+            
+                <nav>
+                     <ul>
+                    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/wilson_pictures.html">Wilson Pictures</a></li>
+                        <li><a href="../html/wilson_videos.html">Wilson Videos</a></li>
+                        <li><a href="../html/wilson_bio.html">Wilson's Bio</a></li>
+                        <li><a href="../html/contact_wilson.html">Contact Wilson</a></li>
+                    </ul>
+                </nav>
+                
+                <main>
+                
+                    <img src="../images/wilsonbaron.jpg" alt="wilson_baron">
+                    <img src="../images/wilsonboat.jpg" alt="wilson_boat">
+                    <img src="../images/wilsoncouch.jpg" alt="wilson_couch">
+                    
+                    <img src="../images/wilsonface.jpg" alt="wilson_face">
+                    <img src="../images/wilsonsuperman.jpg" alt="wilson_supman">
+                    <img src="../images/wilsonjacket.jpg" alt="wilson_jacket">
+                    
+                    <img src="../images/wilsonkitchen.jpg" alt="wilson_kitchen">
+                    <img src="../images/wilsonlawn.jpg" alt="wilson_lawn">
+                    <img src="../images/wilsonlaying.jpg" alt="wilson_laying">
+               
+                    <img src="../images/wilsonleash.jpg" alt="wilson_leash">
+                    <img src="../images/wilsonobx.jpg" alt="wilson_obx">
+                    <img src="../images/wilsonpillow.jpg" alt="wilson_pillow">
+         
+                    <img src="../images/wilsonpool.jpg" alt="wilson_pool">
+                    <img src="../images/wilsonsound.jpg" alt="wilson_sound">
+                    <img src="../images/wilsonsquirrel.jpg" alt="wilson_squirrel">
+                    
+                </main>
+	
+		</body>
+
+</html>
+

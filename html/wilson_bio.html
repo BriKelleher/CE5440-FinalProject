@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Wilson the Dog | Bio</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" rel="javascript"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var menuFX = {};
+		menuFX.toggleMenu = function(menuSelector, mouseOverColor, mouseOutColor) {
+			
+			var background = $(menuSelector).css("background-color");
+			var color = $(menuSelector).css("color");
+
+			$(menuSelector).bind("mouseover", function(){
+				$(this).css("background-color", mouseOverColor);
+				$(this).css("color", mouseOutColor);
+			});
+			
+			$(menuSelector).bind("mouseout", function(){
+				$(this).css("background-color", background);
+				$(this).css("color", color);		
+			});
+			
+		};
+		
+		menuFX.toggleMenu("ul:first li", "#F69957", "#FFFFFF");
+		
+	});	
+
+</script>
+
+<style>
+
+	img, embed, object, audio, video {
+		max-width: 95%;
+	}
+	
+	header {
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	nav {
+  		background-color: #DEDEDE;
+  		height: 40px;
+  		max-width: 95%;
+	}
+	
+	nav ul {
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+	}
+	
+	nav ul li {
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 20px; 
+	}
+	
+	nav li ul { 
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+	}
+
+	nav ul li a {
+    	text-align: left;
+    	color: #000000;
+    	text-decoration: none;
+	}
+	
+	main {
+		padding: 65px;
+		margin: 0 auto;
+	}
+
+</style>
+
+</head>
+
+		<body>
+
+            <div>
+    
+                <header>
+                
+                        <img src="../images/wilsonpics.jpg" alt="wilson_pics">
+            
+                </header>       
+            
+                <nav>
+             
+                    <ul>
+                    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/wilson_pictures.html">Wilson Pictures</a></li>
+                        <li><a href="../html/wilson_videos.html">Wilson Videos</a></li>
+                        <li><a href="../html/wilson_bio.html">Wilson's Bio</a></li>
+                        <li><a href="../html/contact_wilson.html">Contact Wilson</a></li>
+                    
+                    </ul>
+                
+                </nav>
+                
+                <main>
+                
+                <p>
+                Wilson was born on April 14th 2007. 
+                Wilson has a mix of many dog breeds in him including Pointer, Hound and Dalmation. Wilson loves going to the park, swimming at the beach and playing with his friends. Wilson was rescued by us in the summer of 2007 and has been a very happy dog ever since. He has a doggy door leading to the backyard where he hangs out with some of his friends. When he comes back inside he always gets a treat. Wilson spends most of the day sleeping. Below are some pictures of Wilson's and his best friend Rebel.
+                </p>
+                    
+                    <br>
+                    
+                    <img src="../images/wilsonandreb.jpg" alt="wil_rebel">
+                    
+                    <br>
+                   
+                   	<img src="../images/wilandreb.jpg" alt="wil_reb">
+                
+                
+                </main>
+        
+            </div>
+	
+		</body>
+
+</html>

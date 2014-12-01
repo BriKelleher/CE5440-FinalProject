@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Wilson the Dog | Contact</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" rel="javascript"></script>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var menuFX = {};
+		menuFX.toggleMenu = function(menuSelector, mouseOverColor, mouseOutColor) {
+			
+			var background = $(menuSelector).css("background-color");
+			var color = $(menuSelector).css("color");
+
+			$(menuSelector).bind("mouseover", function(){
+				$(this).css("background-color", mouseOverColor);
+				$(this).css("color", mouseOutColor);
+			});
+			
+			$(menuSelector).bind("mouseout", function(){
+				$(this).css("background-color", background);
+				$(this).css("color", color);		
+			});
+			
+		};
+		
+		menuFX.toggleMenu("ul:first li", "#F69957", "#FFFFFF");
+		
+	});	
+
+</script>
+
+<style>
+
+	img, embed, object, audio, video {
+		max-width: 95%;
+	}
+	
+	header {
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	nav {
+  		background-color: #DEDEDE;
+  		height: 40px;
+  		max-width: 95%;
+	}
+	
+	nav ul {
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+	}
+	
+	nav ul li {
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 20px; 
+	}
+	
+	nav li ul { 
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+	}
+
+	nav ul li a {
+    	text-align: left;
+    	color: #000000;
+    	text-decoration: none;
+	}
+	
+	main {
+		padding: 65px;
+		margin: 0 auto;
+	}
+
+	</style>
+
+	<script>
+		
+			$.validator.setDefaults({
+				submitHandler: function() { alert("submitted!"); }
+			});
+			
+			$().ready(function() {
+				
+				$("#commentForm").validate();
+			
+				
+				$("#signupForm").validate({
+					rules: {
+						firstname: "required",
+						lastname: "required",
+						username: {
+							required: true,
+							minlength: 2
+						},
+						password: {
+							required: true,
+							minlength: 5
+						},
+						confirm_password: {
+							required: true,
+							minlength: 5,
+							equalTo: "#password"
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						topic: {
+							required: "#newsletter:checked",
+							minlength: 2
+						},
+						agree: "required"
+					},
+					messages: {
+						firstname: "Please enter your firstname",
+						lastname: "Please enter your lastname",
+						username: {
+							required: "Please enter a username",
+							minlength: "Your username must consist of at least 2 characters"
+						},
+						password: {
+							required: "Please provide a password",
+							minlength: "Your password must be at least 5 characters long"
+						},
+						confirm_password: {
+							required: "Please provide a password",
+							minlength: "Your password must be at least 5 characters long",
+							equalTo: "Please enter the same password as above"
+						},
+						email: "Please enter a valid email address",
+					}
+				});
+			
+				$("#username").focus(function() {
+					var firstname = $("#firstname").val();
+					var lastname = $("#lastname").val();
+					if(firstname && lastname && !this.value) {
+						this.value = firstname + "." + lastname;
+					}
+				});
+			});
+			
+	</script>
+
+	<style type="text/css">
+	
+		#commentForm { width: 500px; }
+		#commentForm label { width: 250px; }
+		#commentForm label.error, #commentForm input.submit { margin-left: 253px; }
+		#signupForm { width: 670px; }
+		#signupForm label.error {
+			margin-left: 10px;
+			width: auto;
+			display: inline;
+		}
+		#newsletter_topics label.error {
+			display: none;
+			margin-left: 103px;
+		}
+		
+	</style>
+</head>
+
+		<body>
+
+            <div>
+    
+                <header>
+            
+                           <img src="../images/wilsonpics.jpg" alt="wilson_pics">
+            
+                </header>       
+            
+                <nav>
+             
+                    <ul>
+                    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/wilson_pictures.html">Wilson Pictures</a></li>
+                        <li><a href="../html/wilson_videos.html">Wilson Videos</a></li>
+                        <li><a href="../html/wilson_bio.html">Wilson's Bio</a></li>
+                        <li><a href="../html/contact_wilson.html">Contact Wilson</a></li>
+                    
+                    </ul>
+                
+                </nav>
+                
+                <main>
+                
+                    <form class="cmxform" id="signupForm" method="get" action="">
+                    <fieldset>
+                        <legend>Please complete this form</legend>
+                        <p>
+                            <label for="firstname">Firstname</label>
+                            <input id="firstname" name="firstname" type="text" />
+                        </p>
+                        <p>
+                            <label for="lastname">Lastname</label>
+                            <input id="lastname" name="lastname" type="text" />
+                        </p>
+                        <p>
+                            <label for="username">Dog's Name</label>
+                            <input id="username" name="username" type="text" />
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" name="password" type="password" />
+                        </p>
+                        <p>
+                            <label for="confirm_password">Confirm password</label>
+                            <input id="confirm_password" name="confirm_password" type="password" />
+                        </p>
+                        <p>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" />
+                        </p>
+                        <p>
+                            <label for="newsletter">I'd like to receive more information about Wilson</label>
+                            <input type="checkbox" class="checkbox" id="newsletter" name="newsletter" />
+                        </p>
+                        
+                        <p>
+                            <input class="submit" type="submit" value="Submit"/>
+                        </p>
+                    </fieldset>
+                </form>
+                
+                
+                </main>
+        
+            </div>
+	
+		</body>
+
+</html>

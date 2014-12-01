@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Wilson the Dog</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" rel="javascript"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var menuFX = {};
+		menuFX.toggleMenu = function(menuSelector, mouseOverColor, mouseOutColor) {
+			
+			var background = $(menuSelector).css("background-color");
+			var color = $(menuSelector).css("color");
+
+			$(menuSelector).bind("mouseover", function(){
+				$(this).css("background-color", mouseOverColor);
+				$(this).css("color", mouseOutColor);
+			});
+			
+			$(menuSelector).bind("mouseout", function(){
+				$(this).css("background-color", background);
+				$(this).css("color", color);		
+			});
+			
+		};
+		
+		menuFX.toggleMenu("ul:first li", "#F69957", "#FFFFFF");
+		
+	});	
+
+</script>
+
+<style>
+
+	embed, object, audio, video {
+		max-width: 95%;
+	}
+	
+	img {
+		max-width: 95%;
+		top: 500px;
+		left: 50px;
+	}
+	
+	header {
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	nav {
+  		background-color: #DEDEDE;
+  		height: 40px;
+  		max-width: 95%;
+	}
+	
+	nav ul {
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+	}
+	
+	nav ul li {
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 20px; 
+	}
+	
+	nav li ul { 
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+	}
+
+	nav ul li a {
+    	text-align: left;
+    	color: #000000;
+    	text-decoration: none;
+	}
+	
+	main {
+		padding: 65px;
+		margin: 0 auto;
+	}
+
+</style>
+
+</head>
+
+<body>
+	
+	<header>
+        <img src="images/wilsonpics.jpg" alt="wilson_pics">
+    </header>
+    
+		<nav>
+        	<ul>
+            	<li><a href="index.html">Home</a></li>
+                <li><a href="html/wilson_pictures.html">Wilson Pictures</a></li>
+                <li><a href="html/wilson_videos.html">Wilson Videos</a></li>
+                <li><a href="html/wilson_bio.html">Wilson's Bio</a></li>
+                <li><a href="html/contact_wilson.html">Contact Wilson</a></li>
+        	</ul>
+        </nav>
+        <main>
+    	<img src="images/wilsonbackyard.png" alt="wilson_backyard">
+    	</main>
+</body>
+</html>

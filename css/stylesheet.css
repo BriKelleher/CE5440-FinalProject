@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/* CSS Document */
+
+	embed, object, audio, video {
+	
+		max-width: 95%;
+}
+
+	img {
+		
+		max-width: 95%;
+		top: 500px;
+		left: 50px;
+	}
+
+	header {
+		
+		margin: 0 auto;
+		display: block;	
+		
+}
+
+	body {
+	
+		margin: 0px;
+		padding: 0px;
+	
+}
+
+	#container {
+		
+		background: #DEDEDE;
+		border: 2px solid #000;
+		width: 95%;
+		margin: 0px auto;
+		padding: 5px;
+			
+}
+
+	.rounded { 
+	
+		-webkit-border-radius: 12px; 
+		-moz-border-radius: 12px; 
+		border-radius: 12px;
+		
+}
+	
+	nav {
+	
+  		background-color: #000;
+  		height: 40px;
+}
+ 
+ 
+	nav ul {
+		
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+}
+ 
+	nav ul li {
+		
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 10px; 
+ 
+}
+ 
+	nav li ul { 
+
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+
+}
+ 
+	nav ul li a {
+		
+	    display: block;
+	    text-decoration: none;
+	    padding: 6px 9px 3px 9px;
+	    background: #2C5463;
+	    color: #FFFFFF;  
+	    margin: 0 auto;
+	    white-space: nowrap;
+	    height: 30px;
+	    width: auto;
+	    text-align: center;
+ 
+}
+
+	nav ul li a:hover { 
+	
+  		background: #FF9C56;
+		 
+}
+ 
+	nav li:hover ul {
+		
+ 		display: block;
+ 		position: absolute;
+  		height: 30px;
+}
+ 
+	nav li:hover li {
+		
+  		float: none;
+  		font-size: 11px;
+ 
+}
+ 
+	nav li:hover a { 
+	
+ 		background: #FF9C56; 
+		 
+}
+ 
+	nav li:hover li a:hover { 
+	
+  		background: #FF9C56; 
+		
+}
+ 
+	nav ul li ul li a {
+		
+    	text-align: left;
+		
+}
+
+@media screen and (max-width: 415px) {
+	nav li {
+		display: block;
+		width: 100%;
+		font-size: 1.5em;	
+	}
+	body {
+		font-size: 20px;	
+	}
+}
+
+
+@media screen and (min-width: 416px) {
+	nav {
+		top: 350px;	
+		width: 100%;
+	}
+	
+}
+
+
+	main {
+		
+		padding: 65px;
+		margin: 0 auto;		
+}
+
+	p {
+		color: #FF660F;
+		border: 1px solid;
+		padding: 10px;
+}

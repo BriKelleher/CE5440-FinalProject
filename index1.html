@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+<html>
+
+		<head>
+		    
+
+			<title>Wilson the Dog</title>
+
+			<link type="text/css" href="css/stylesheet1.css" rel="stylesheet">
+            <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+            <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            
+            <style>
+                .navigation ul {
+                    list-style-type: none;
+                    
+                }
+                .navigation ul li {
+                    padding: 5px;
+                    border: #000 solid 1px;
+                    display: block;
+  		            position: relative;
+  		            float: left;
+		            margin: 10px;
+                }
+            </style>
+
+            
+		</head>
+
+		<body link="#FFFFFF" alink="#000" vlink="#A03C13">
+
+            <div id="container">
+    
+                <header>
+                
+                        <img class="rounded" src="images/wilsonpics.jpg" alt="wilson_pics">
+                
+                </header>
+                
+                <div class="navigation">
+                    
+                </div>
+            
+                <!-- 
+                <nav class="rounded">
+             
+                    <ul>
+                    
+                        <li><a href="index1.html">Home</a></li>
+                        <li><a href="html/wilson_pictures.html">Wilson Pictures</a></li>
+                        <li><a href="html/wilson_videos.html">Wilson Videos</a></li>
+                        <li><a href="html/wilson_bio.html">Wilson's Bio</a></li>
+                        <li><a href="html/contact_wilson.html">Contact Wilson</a></li>
+                    
+                    </ul>
+                
+                </nav>
+                -->
+                
+                <main>
+                              
+                
+                <img class="rounded" src="images/wilsonbackyard.jpg" alt="wilson_backyard">
+                
+                
+                </main>
+        
+            </div>
+	
+		</body>
+		<script>
+		    
+		    function changeNav(data) {
+		        var obj = $.parseJSON(data)
+		        var menu = "<ul>";
+		        for(var i = 0; i< obj.pages.length; i++){
+		            console.log(obj.pages[i].page);
+		            menu += "<li><a href='" + obj.pages[i].link + "'>" + obj.pages[i].page + "</a></li>";
+		        }
+		        menu += "</ul>"
+		        
+		        $(".navigation").html(menu);
+		        $(".navigation ul li").css({
+		            color:obj.colors.text
+		        });
+		        $(".navigation ul li").mousover(function(){
+		            $(this).css("background-color", obj.colors[0].hover);
+		        });
+		        $(".navigation ul li").mouseout(function(){
+		            $(this).css("background-color", "#FF3366");
+		        });
+		    }
+		    
+		    $.get("menu.html", function(data){
+            changeNav(data);    
+        });
+        
+		</script>
+
+</html>

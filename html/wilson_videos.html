@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Wilson the Dog | Videos</title>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" rel="javascript"></script>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var menuFX = {};
+		menuFX.toggleMenu = function(menuSelector, mouseOverColor, mouseOutColor) {
+			
+			var background = $(menuSelector).css("background-color");
+			var color = $(menuSelector).css("color");
+
+			$(menuSelector).bind("mouseover", function(){
+				$(this).css("background-color", mouseOverColor);
+				$(this).css("color", mouseOutColor);
+			});
+			
+			$(menuSelector).bind("mouseout", function(){
+				$(this).css("background-color", background);
+				$(this).css("color", color);		
+			});
+			
+		};
+		
+		menuFX.toggleMenu("ul:first li", "#F69957", "#FFFFFF");
+		
+	});	
+
+</script>
+
+<style>
+
+	img, embed, object, audio, video {
+		max-width: 95%;
+	}
+	
+	header {
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	nav {
+  		background-color: #DEDEDE;
+  		height: 40px;
+  		max-width: 95%;
+	}
+	
+	nav ul {
+  		font-size: 20px;
+  		margin: 0 auto;
+  		padding: 0;
+  		list-style: none;
+	}
+	
+	nav ul li {
+  		display: block;
+  		position: relative;
+  		float: left;
+		margin: 20px; 
+	}
+	
+	nav li ul { 
+  		display: none;
+		margin: 0 auto; 
+		width: 14%;
+	}
+
+	nav ul li a {
+    	text-align: left;
+    	color: #000000;
+    	text-decoration: none;
+	}
+	
+	main {
+		padding: 65px;
+		margin: 0 auto;
+	}
+
+</style>
+
+</head>
+
+		<body>
+
+            <div>
+    
+                <header>
+                
+                    <img src="../images/wilsonpics.jpg" alt="wilson_pics">
+            
+                </header>       
+            
+                <nav>
+             
+                    <ul>
+                    
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html/wilson_pictures.html">Wilson Pictures</a></li>
+                        <li><a href="../html/wilson_videos.html">Wilson Videos</a></li>
+                        <li><a href="../html/wilson_bio.html">Wilson's Bio</a></li>
+                        <li><a href="../html/contact_wilson.html">Contact Wilson</a></li>
+                    
+                    </ul>
+                
+                </nav>
+                
+                <main>
+                <p>
+                Wilson Jumps in the Sound
+                </p>
+                
+                <iframe width="300" height="315" src="//www.youtube.com/embed/6DKgR5yaZjE" frameborder="0" allowfullscreen>
+                </iframe>
+                
+                <br>
+                <p>
+                Wilson tastes the bottle
+                </p>
+                
+                <iframe width="300" height="315" src="//www.youtube.com/embed/zaNxI9f41VA" frameborder="0" allowfullscreen>
+                    
+                </iframe>
+                
+                <br>
+                <p>
+                Wilson gets lost in the snow
+                </p>
+                
+                <iframe width="300" height="315" src="//www.youtube.com/embed/Tfp6KOXuoXA" frameborder="0" allowfullscreen>
+                </iframe>
+                
+                
+                </main>
+        
+            </div>
+	
+		</body>
+
+</html>
